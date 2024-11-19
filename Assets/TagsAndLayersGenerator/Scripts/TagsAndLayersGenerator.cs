@@ -7,16 +7,18 @@ using UnityEditor;
 
 public class TagsAndLayersGenerator
 {
-    [MenuItem("zer0/Widgets/TagsAndLayersGenerator/Generate Tags")]
+    [MenuItem("zer0/TagsAndLayersGenerator/Generate Tags")]
     public static void GenerateTags()
     {
         DateTime now = DateTime.Now;
         StringBuilder tagClass = new StringBuilder();
-        tagClass.AppendLine("public static class Tags {");
+        tagClass.AppendLine("namespace zer0 {");
+        tagClass.AppendLine("\tpublic static class Tags {");
         foreach (string tag in UnityEditorInternal.InternalEditorUtility.tags)
         {
-            tagClass.AppendLine("\tpublic const string " + tag.Replace(" ", "") + " = \"" + tag + "\";");
+            tagClass.AppendLine("\t\tpublic const string " + tag.Replace(" ", "") + " = \"" + tag + "\";");
         }
+        tagClass.AppendLine("\t}");
         tagClass.AppendLine("}");
 
         string path = EditorUtility.SaveFilePanel("Select a file", "Assets/Editor/TagsAndLayerGenerator/Scripts", "Tags", "cs");
@@ -33,16 +35,18 @@ public class TagsAndLayersGenerator
         }
     }
 
-    [MenuItem("zer0/Widgets/TagsAndLayersGenerator/Generate Layers")]
+    [MenuItem("zer0/TagsAndLayersGenerator/Generate Layers")]
     public static void GenerateLayers()
     {
         DateTime now = DateTime.Now;
         StringBuilder layerClass = new StringBuilder();
-        layerClass.AppendLine("public static class Layers {");
+        layerClass.AppendLine("namespace zer0 {");
+        layerClass.AppendLine("\tpublic static class Layers {");
         foreach (string layer in UnityEditorInternal.InternalEditorUtility.layers)
         {
-            layerClass.AppendLine("\tpublic const string " + layer.Replace(" ", "") + " = \"" + layer + "\";");
+            layerClass.AppendLine("\t\tpublic const string " + layer.Replace(" ", "") + " = \"" + layer + "\";");
         }
+        layerClass.AppendLine("\t}");
         layerClass.AppendLine("}");
 
         string path = EditorUtility.SaveFilePanel("Select a file", "Assets/Editor/TagsAndLayerGenerator/Scripts", "Layers", "cs");
@@ -56,7 +60,7 @@ public class TagsAndLayersGenerator
         Debug.Log("Layers have been generated.");
     }
 
-    [MenuItem("zer0/Widgets/TagsAndLayersGenerator/Generate Both")]
+    [MenuItem("zer0/TagsAndLayersGenerator/Generate Both")]
     public static void GenerateBoth()
     {
         GenerateTags();
