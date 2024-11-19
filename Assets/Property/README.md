@@ -1,6 +1,6 @@
 # Unity-Proeprty
 
-主要是與`PropertyAttribute`以及`PropertyDrawer`相關的Widgets。
+Widgets associated with `PropertyAttribute` and `PropertyDrawer`.
 
 ## Contents
 - PropertyObserver
