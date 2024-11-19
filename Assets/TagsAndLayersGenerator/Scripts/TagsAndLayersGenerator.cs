@@ -5,7 +5,7 @@ using System.IO;
 using UnityEngine;
 using UnityEditor;
 
-public class TagsAndLayersGenerator : MonoBehaviour
+public class TagsAndLayersGenerator
 {
     [MenuItem("zer0/Widgets/TagsAndLayersGenerator/Generate Tags")]
     public static void GenerateTags()

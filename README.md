@@ -6,4 +6,4 @@ Updated periodically.
 
 ## Contents
 
-- [TagsAndLayersGenerator](/Assets/Editor/TagsAndLayersGenerator/)
+- [TagsAndLayersGenerator](/Assets/TagsAndLayersGenerator/)
