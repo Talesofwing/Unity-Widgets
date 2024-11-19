@@ -3,7 +3,7 @@
 
 
 
-namespace zer0
+namespace zer0.TagsAndLayersGenerator
 {
     public static class Layers
     {
