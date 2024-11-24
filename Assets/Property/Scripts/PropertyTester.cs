@@ -15,6 +15,10 @@ namespace zer0.Property
         [PropertyObserver("OnPlayerChanged")]
         private Player _player;
 
+        [SerializeField]
+        [PropertyObserver("OnPlayerChanged")]
+        private string Name;
+
         private void OnPlayerChanged()
         {
             Debug.Log(_player);
