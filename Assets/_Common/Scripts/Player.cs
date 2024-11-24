@@ -7,12 +7,11 @@ namespace zer0
     public class Player : MonoBehaviour
     {
         [SerializeField]
-        [PropertyObserver("OnChanged")]
         private string Name = "";
 
-        private void OnChanged()
+        public override string ToString()
         {
-            Debug.Log("Name: " + Name);
+            return $"Player: {Name}";
         }
     }
 }
