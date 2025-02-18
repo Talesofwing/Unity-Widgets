@@ -11,7 +11,6 @@ namespace zer0.Property.Editor
     [CustomPropertyDrawer(typeof(PropertyObserverAttribute))]
     public class PropertyObserverDrawer : PropertyDrawer
     {
-        private UnityEngine.Object _object;
         private bool _isDirty = false;
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
