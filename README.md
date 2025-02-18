@@ -5,7 +5,7 @@ A collection of potentially useful tools for Unity.
 Updated periodically.
 
 ## Todo
-- [x]P ropertyDisplayerDrawer
+- [x] PropertyDisplayerDrawer
 - [x] MaterialPropertyDisplayerDrawer
 
 ## Contents
